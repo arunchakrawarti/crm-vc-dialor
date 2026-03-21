@@ -6,7 +6,7 @@ import { useState } from 'react';
 import LeadModal from './LeadModal';
 
 const LeadStatus = () => {
-  const [open, setOpen] = useState("false")
+  const [open, setOpen] = useState(false)
   const tableData = [
     { id: 1, status: "Interested (0)", isDefault: "False", conversion: "Won", color: "bg-[#00d26a]" },
     { id: 2, status: "Call Back (0)", isDefault: "False", conversion: "Open", color: "bg-[#ff33cc]" },
@@ -48,7 +48,7 @@ const LeadStatus = () => {
           WATCH VIDEO <Play size={18} fill="red" />
         </Button>
         
-        <Button  onClick={() => setOpen(true)} variant='success'>
+        <Button onClick={() => setOpen(true)} variant='success'>
           <Plus size={24} strokeWidth={3} />
         </Button>
       </div>

@@ -38,7 +38,7 @@ const MainleadRules = () => {
                 <SendRules />
             )}
 
-            {activeTab === "leads-owned-by-me" && (
+            {activeTab === "lead-automation" && (
                 <LeadAutomation />
             )}
         </div>

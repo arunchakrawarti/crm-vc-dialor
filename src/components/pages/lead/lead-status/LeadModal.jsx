@@ -50,7 +50,7 @@ const LeadModal = ({ isOpen, onClose }) => {
             </div>
 
             <div className="space-y-5">
-              <div className="h-[44px] hidden md:block"></div> {/* Alignment spacer */}
+              <div className="h-[44px] hidden md:block"></div>
               <div className="h-[44px] hidden md:block"></div>
               <CheckboxField label="Description Show or Not" />
               <CheckboxField label="Hide This Status From ABM" />
