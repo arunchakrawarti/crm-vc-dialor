@@ -9,12 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@tiptap/react": "^3.20.4",
+    "@tiptap/starter-kit": "^3.20.4",
     "clsx": "^2.1.1",
     "gsap": "^3.14.2",
     "lucide-react": "^0.577.0",
     "next": "16.1.7",
+    "quill": "^2.0.3",
+    "quill-image-resize-module-react": "^3.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-quill-new": "^3.8.3",
     "recharts": "^3.8.0",
     "remixicon": "^4.9.1",
     "tailwind-merge": "^3.5.0"

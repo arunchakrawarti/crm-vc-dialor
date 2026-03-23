@@ -5,9 +5,12 @@ const variantClasses = {
   default: "bg-gray-200 text-gray-500",
   outline: "bg-white text-gray-800 border border-gray-300 ",
   tertiary:"bg-white text-red-600",
+  redbtn:"bg-red-500 text-white",
+  greenbtn:"!bg-[#8cc63f] !text-white",
   primary: "bg-white border border-gray-300",
   success: "bg-blue-500 text-white",
   danger: "bg-white text-gray-500",
+  bluebtn:"bg-[#1a335d] !text-white",
   secondary:" bg-blue-500 text-white",
   gradientcolor:"bg-gradient-to-r from-[#3b82f6] to-[#7c3aed] text-white font-bold "
 };

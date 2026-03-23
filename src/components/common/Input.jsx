@@ -17,15 +17,30 @@ const Input = ({
   return (
     <div className="flex w-full flex-col gap-1">
       
-      {label && (
-        <label
-          className="font-inter font-semibold mb-1 text-[12px] text-[var(--color-gray-500)] uppercase tracking-wider"
-        >
-          {label}
-        </label>
-      )}
+      {label && rest?.type !== "checkbox" && (
+  <label className="font-inter font-semibold mb-1 text-[12px] text-[var(--color-gray-500)] uppercase tracking-wider">
+    {label}
+  </label>
+)}
 
-      {rest?.type === "textarea" ? (
+      {rest?.type === "checkbox" ? (
+      <label
+        htmlFor={rest.id}
+        className="flex items-center gap-3 cursor-pointer"
+      >
+        <input
+          type="checkbox"
+          id={rest.id}
+          checked={rest.value}
+          onChange={(e) => rest.onChange?.(e.target.checked)}
+          className="w-4 h-4 accent-blue-500"
+        />
+        <span className="text-sm text-gray-600">
+          {label}
+        </span>
+      </label>
+
+    ) :rest?.type === "textarea" ? (
         <div
           className={clsx(
             "flex w-full gap-3 rounded-lg px-3 py-2 border border-gray-300 bg-[var(--color-white)]",

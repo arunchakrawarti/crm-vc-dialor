@@ -5,12 +5,9 @@ const LeadsOwned = () => {
   return (
     <div className="bg-white border border-gray-200 rounded shadow-sm min-h-[450px] flex flex-col relative overflow-hidden">
       <div className="flex-1 flex flex-col items-center justify-center p-12">
-        <div className="relative mb-8 flex items-center justify-center">
+        <div className="mb-8 flex items-center justify-center">
             <div className="text-[#00adef] opacity-80">
                 <Monitor size={100} strokeWidth={1} />
-            </div>
-            <div className="absolute bottom-[-10px] right-[-10px] bg-white rounded-full p-2 shadow-sm text-[#00adef]">
-                <Search size={45} strokeWidth={3} />
             </div>
         </div>
     
