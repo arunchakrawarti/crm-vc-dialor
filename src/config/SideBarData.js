@@ -118,7 +118,7 @@ export const SideBarData = [
       {
         title: "Branches",
         icon: "ri-building-2-line",
-        link: "/",
+        link: "/branches",
       },
     ],
   },
@@ -127,7 +127,7 @@ export const SideBarData = [
       {
         title: "Sources",
         icon: "ri-links-line",
-        link: "/",
+        link: "/sources",
       },
     ],
   },
@@ -136,7 +136,7 @@ export const SideBarData = [
       {
         title: "Contact",
         icon: "ri-contacts-line",
-        link: "/",
+        link: "/contact",
       },
     ],
   },
@@ -145,7 +145,7 @@ export const SideBarData = [
       {
         title: "Followup Report",
         icon: "ri-file-list-3-line",
-        link: "/",
+        link: "/followup-report",
       },
     ],
   },
@@ -154,7 +154,7 @@ export const SideBarData = [
       {
         title: "Task",
         icon: "ri-task-line",
-        link: "/",
+        link: "/task",
       },
     ],
   },
@@ -163,7 +163,7 @@ export const SideBarData = [
       {
         title: "Invoice",
         icon: "ri-file-text-line",
-        link: "/",
+        link: "/invoice",
       },
     ],
   },
@@ -172,7 +172,7 @@ export const SideBarData = [
       {
         title: "Mobile Templates",
         icon: "ri-smartphone-line",
-        link: "/",
+        link: "/mobile-templates",
       },
     ],
   },
@@ -181,7 +181,7 @@ export const SideBarData = [
       {
         title: "Display Settings",
         icon: "ri-settings-4-line",
-        link: "/",
+        link: "/display-settings",
       },
     ],
   },
@@ -190,7 +190,7 @@ export const SideBarData = [
       {
         title: "Payment",
         icon: "ri-wallet-3-line",
-        link: "/",
+        link: "/payment",
       },
     ],
   },
@@ -199,7 +199,7 @@ export const SideBarData = [
       {
         title: "IVR Leads",
         icon: "ri-phone-line",
-        link: "/",
+        link: "/ivr-leads",
       },
     ],
   },
