@@ -107,8 +107,8 @@ export const SideBarData = [
         icon: "ri-mail-send-line",
         link: "#",
         children: [
-          { title: "Product", link: "/email-sms/create-email" },
-          { title: "Category", link: "/email-sms/email-history" },
+          { title: "Product", link: "/products/product" },
+          { title: "Category", link: "/products/category" },
         ],
       },
     ],
