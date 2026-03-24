@@ -87,6 +87,35 @@ export const SideBarData = [
   {
     items: [
       {
+        title: "Live Tracking",
+        icon: "ri-mail-send-line",
+        link: "#",
+        children: [
+          { title: "Tracking Dashboard", link: "/live-tracking/tracking-dashboard" },
+          { title: "User Attendence", link: "/live-tracking/user-attendence" },
+          { title: "User Offline", link: "/live-tracking/user-offline" },
+          { title: "Location History", link: "/live-tracking/location-history" },
+          { title: "User Expenses", link: "/live-tracking/user-expenses" },
+        ],
+      },
+    ],
+  },
+   {
+    items: [
+      {
+        title: "Products",
+        icon: "ri-mail-send-line",
+        link: "#",
+        children: [
+          { title: "Product", link: "/email-sms/create-email" },
+          { title: "Category", link: "/email-sms/email-history" },
+        ],
+      },
+    ],
+  },
+  {
+    items: [
+      {
         title: "Branches",
         icon: "ri-building-2-line",
         link: "/",
