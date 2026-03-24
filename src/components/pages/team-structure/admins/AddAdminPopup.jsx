@@ -12,20 +12,13 @@ const AddAdminPopup = ({ isOpen, onClose }) => {
     <OverlayModal
       isOpen={isOpen}
       onClose={onClose}
-      showCloseIcon={false}
-      modalClass="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[60%] max-w-4xl"
+      modalClass=""
     >
-      <div className="bg-[#F3F3F3] rounded-sm overflow-hidden border border-gray-300 shadow-2xl">
+      <div className="bg-[#F3F3F3] rounded-sm">
         <div className="bg-white px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center border-b border-gray-200">
           <h2 className="text-lg sm:text-xl font-semibold text-gray-800 uppercase tracking-tight">
             Add Admin
           </h2>
-
-          <Button variant="success"
-            onClick={onClose}
-          >
-            <X size={20} className="sm:w-[22px] sm:h-[22px]" strokeWidth={3} />
-          </Button>
         </div>
 
        
