@@ -11,8 +11,8 @@ const Followupchart = () => {
   ];
 
   return (
-    <div className="mt-5 p-4 bg-gray-50">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div className="mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {chartTitles.map((title, index) => (
           <ChartCard key={index} title={title} />
         ))}
@@ -38,7 +38,7 @@ const ChartCard = ({ title }) => (
           <span className="text-gray-600 font-semibold">Total</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-full bg-[#5c59c2]"></span> 
+          <span className="w-3 h-3 rounded-full bg-red-500"></span> 
           <span className="text-gray-600 font-semibold">Complete</span>
         </div>
       </div>
