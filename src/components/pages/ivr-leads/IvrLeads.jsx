@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Monitor } from "lucide-react";
+import RecordStatus from "@/components/common/RecordStatus";
 
 const IvrLeads = () => {
   return (
@@ -19,7 +20,13 @@ const IvrLeads = () => {
           You have no records found.
         </p>
       </div>
-
+<div className="p-2">
+        <RecordStatus 
+          totalItems={0} 
+          label="Leads" 
+          showNumbers={false} 
+        />
+      </div>
     </div>
   );
 };
