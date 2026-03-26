@@ -5,7 +5,7 @@ import React from 'react';
 
 const LeadDisplaySetting = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto p-6 bg-white rounded-lg shadow-sm border border-gray-100 font-inter">
+    <div className="w-full p-6 bg-white rounded-lg shadow-sm border border-gray-100 font-inter">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4">
         <div className="flex flex-col gap-4">
           <Input type="checkbox" id="serialNo" label="Show Serial No" />
@@ -20,7 +20,7 @@ const LeadDisplaySetting = () => {
           <Input type="checkbox" id="customQuestion" label="Show Custom Question" />
           <Input type="checkbox" id="mobileAppCustom" label="Show Mobile App Custom Question" />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col mt-4 gap-4">
           <Input type="checkbox" id="source" label="Show Source" />
           <Input type="checkbox" id="priority" label="Show Priority" />
           <Input type="checkbox" id="description" label="Show Description" />
