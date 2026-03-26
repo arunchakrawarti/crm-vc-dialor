@@ -10,31 +10,24 @@ import TradeIndia from "./TradeIndia";
 
 const PullMain = () => {
   return (
-    <div className="p-3 sm:p-6 bg-[#F3F3F3] min-h-screen">
+    <div className="bg-[#F3F3F3]">
 
-      {/* --- TOP HEADER BUTTONS --- */}
       <div className="flex flex-col sm:flex-row justify-end gap-2 mb-4 sm:mb-6">
-        <Button variant="success" className="w-full sm:w-auto text-xs sm:text-sm">
+        <Button href="/automation/pull-apis/google-ads" variant="success">
           Go to Google Ads Integration
         </Button>
-        <Button variant="success" className="w-full sm:w-auto text-xs sm:text-sm">
+        <Button href="/automation/pull-apis/facebook-integration" variant="success">
           Go to Facebook Integration
         </Button>
       </div>
 
       <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-4 sm:p-6 lg:p-8">
-
-        {/* --- HEADER --- */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 sm:mb-8">
-
-          {/* Logo */}
           <div className="bg-[#B22222] p-2 rounded-sm w-fit">
             <h1 className="text-white text-lg sm:text-2xl font-bold italic tracking-tight px-2">
               magicbricks
             </h1>
           </div>
-
-          {/* Toggle */}
           <div className="flex items-center gap-2">
             <div className="bg-[#5BC0DE] text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold flex items-center gap-2 relative w-14 sm:w-16 h-6 sm:h-7 cursor-pointer">
               <span className="ml-1">ON</span>
@@ -42,8 +35,6 @@ const PullMain = () => {
             </div>
           </div>
         </div>
-
-        {/* --- FORM FIELDS --- */}
         <div className="space-y-4 sm:space-y-6">
 
           <div>
@@ -79,8 +70,6 @@ const PullMain = () => {
           </div>
 
         </div>
-
-        {/* --- BUTTONS --- */}
         <div className="flex flex-wrap justify-center sm:justify-end items-center gap-2 sm:gap-4 mt-6 sm:mt-10">
 
           <Button variant="success" className="w-full sm:w-auto text-xs sm:text-sm">
