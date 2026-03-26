@@ -172,7 +172,7 @@ export const SideBarData = [
       {
         title: "Mobile Templates",
         icon: "ri-smartphone-line",
-        link: "/mobile-templates",
+        link: "/mobile-template",
       },
     ],
   },
