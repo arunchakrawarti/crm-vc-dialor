@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Sidebar from "../organisms/Sidebar";
 import Header from "../organisms/Header";
+import Footer from "../organisms/Footer";
 
 const MainLayout = ({ children, title }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -26,6 +27,7 @@ const MainLayout = ({ children, title }) => {
         <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 md:px-6 lg:px-8">
           {children}
         </main>
+        <Footer/>
       </div>
     </div>
   );

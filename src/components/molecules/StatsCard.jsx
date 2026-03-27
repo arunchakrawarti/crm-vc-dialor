@@ -3,6 +3,7 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
 import Input from "../common/Input";
+import { useRouter } from "next/navigation";
 
 const StatsCard = ({
   title,
@@ -16,7 +17,16 @@ const StatsCard = ({
   count = 0,
   filter = "ALL",
   onFilterChange,
+  route
 }) => {
+
+  const router = useRouter(); 
+
+  const handleClick = () => {
+    if (route) {
+      router.push(route);
+    }
+  };
 
   if (type === "chart") {
     return (
@@ -67,9 +77,10 @@ const StatsCard = ({
   }
   return (
     <div
+    onClick={handleClick}
       className={twMerge(
         clsx(
-          "rounded-md shadow-md p-6 flex items-center justify-between",
+          "rounded-md shadow-md p-6 flex items-center justify-between cursor-pointer",
           bg
         )
       )}

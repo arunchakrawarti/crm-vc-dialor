@@ -1,3 +1,4 @@
+import { Monitor } from 'lucide-react'
 import React from 'react'
 
 const Followup = () => {

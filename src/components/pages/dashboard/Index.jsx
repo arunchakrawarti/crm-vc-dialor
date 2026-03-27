@@ -14,6 +14,7 @@ const MainDashboard = () => {
           subtitle={item.subtitle}
           icon={item.icon}
           color={item.color}
+          route={item.route}
         />
       ))}
     </div>
@@ -39,18 +40,21 @@ const statsData = [
     value: "0",
     icon: "ri-timer-line",
     color: "text-green-500",
+    route: "/home/carddetails",
   },
   {
     title: "Tomorrow Followups",
     value: "0",
     icon: "ri-time-line",
     color: "text-gray-500",
+    route: "/home/carddetails",
   },
   {
     title: "Pending Followups",
     value: "0",
     icon: "ri-history-line",
     color: "text-pink-500",
+    route: "/home/carddetails",
   },
   {
     title: "Total Leads",
@@ -58,6 +62,7 @@ const statsData = [
     subtitle: "0 from this month",
     icon: "ri-bar-chart-box-line",
     color: "text-purple-500",
+    route: "/lead/leads",
   },
   {
     title: "Total Fresh Leads",
@@ -65,6 +70,7 @@ const statsData = [
     subtitle: "0 from this month",
     icon: "ri-line-chart-line",
     color: "text-cyan-500",
+    route: "/leads/fresh",
   },
   {
     title: "Expected Income",
@@ -72,27 +78,7 @@ const statsData = [
     subtitle: "From 0 Leads",
     icon: "ri-money-rupee-circle-line",
     color: "text-blue-500",
-  },
-   {
-    title: "Area Business Manager (ABM)",
-    value: "0",
-    subtitle: "0 from this month",
-    icon: "ri-user-2-line",
-    color: "text-orange-400",
-  },
-  {
-    title: "Area Business Executive (ABE)",
-    value: "0",
-    subtitle: "0 from this month",
-    icon: "ri-team-line",
-    color: "text-teal-500",
-  },
-  {
-    title: "Inbound and Outbound",
-    value: "Dial-Up",
-    subtitle: "Dial-Up",
-    icon: "ri-customer-service-2-line",
-    color: "text-blue-600",
+    route: "/income",
   },
 ];
 
