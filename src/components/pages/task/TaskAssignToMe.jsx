@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Button from "@/components/common/Button";
 import { Monitor } from "lucide-react";
-import NewTaskPopup from "./NewTaskPopup";
 
 
 const TaskAssignToMe = () => {

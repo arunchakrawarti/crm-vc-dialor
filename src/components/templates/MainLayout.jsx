@@ -12,22 +12,30 @@ const MainLayout = ({ children, title }) => {
   }, [drawerOpen]);
 
   return (
-    <div className="h-screen w-full overflow-hidden flex bg-gray-100">
-      
-      <Sidebar
-        isOpen={drawerOpen}
-        isMobile
-        onClose={() => setDrawerOpen(false)}
-      />
+    <div className="h-screen w-full flex bg-gray-100 overflow-hidden">
+    
+      <div className="h-full overflow-y-auto no-scrollbar">
+        <Sidebar
+          isOpen={drawerOpen}
+          isMobile
+          onClose={() => setDrawerOpen(false)}
+        />
+      </div>
 
-     
-      <div className="flex-1 min-w-0 flex flex-col">
-        <Header title={title} onMenuClick={() => setDrawerOpen(true)} />
+      <div className="flex-1 min-w-0 flex flex-col h-full">
+      
+        <Header
+          title={title}
+          onMenuClick={() => setDrawerOpen(true)}
+        />
+        <div className="flex-1 overflow-y-auto flex flex-col">
           
-        <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 md:px-6 lg:px-8">
-          {children}
-        </main>
-        <Footer/>
+          <main className="flex-1 p-4 md:px-6 lg:px-8">
+            {children}
+          </main>
+
+          <Footer />
+        </div>
       </div>
     </div>
   );

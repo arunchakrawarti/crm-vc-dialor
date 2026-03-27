@@ -2,7 +2,7 @@ import MainDashboard from '@/components/pages/dashboard/Index'
 import MainLayout from '@/components/templates/MainLayout'
 import React from 'react'
 
-const page = () => {
+const page = ({title}) => {
   return (
     <div>
       <MainLayout>
