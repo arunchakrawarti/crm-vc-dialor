@@ -5,7 +5,9 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Facebook Forms"
+      showSearch={true}
+      >
         <Suspense fallback={<div>Loading...</div>}>
         <FacebookFormDetail/>
         </Suspense>

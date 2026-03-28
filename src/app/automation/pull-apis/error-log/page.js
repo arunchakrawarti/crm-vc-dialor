@@ -5,7 +5,9 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Facebook Error Logs"
+      showSearch={true}
+      >
         <Suspense fallback={<div>Loading...</div>}>
         <ErrorLog/>
         </Suspense>

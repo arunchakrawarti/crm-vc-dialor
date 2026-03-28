@@ -1,8 +1,9 @@
+"use client";
+import React from "react";
 import Button from "@/components/common/Button";
 import Input from "@/components/common/Input";
-import Header from "@/components/organisms/Header";
 
-const TaskFilters = () => (
+const TaskReportSearch = () => (
   <div className="flex flex-wrap items-end gap-4">
     <div className="w-full md:w-64">
       <Input 
@@ -29,10 +30,5 @@ const TaskFilters = () => (
     </Button>
   </div>
 );
-export default function Page() {
-  return (
-    <Header title="Task Report">
-      <TaskFilters />
-    </Header>
-  );
-}
+
+export default TaskReportSearch;

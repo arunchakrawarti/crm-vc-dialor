@@ -5,7 +5,8 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Facebook Lead Integration"
+      showSearch={true}>
         <Suspense fallback={<div>Loading...</div>}>
         <FacebookIntegration/>
         </Suspense>

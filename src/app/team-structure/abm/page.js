@@ -5,7 +5,8 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Area Business Manager(ABM)"
+      showSearch={false}>
         <Suspense fallback={<div>Loading...</div>}>
         <Abm/>
         </Suspense>

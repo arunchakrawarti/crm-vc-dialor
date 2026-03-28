@@ -2,10 +2,11 @@ import MainDashboard from '@/components/pages/dashboard/Index'
 import MainLayout from '@/components/templates/MainLayout'
 import React from 'react'
 
-const page = ({title}) => {
+const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout  title="Dashboard"
+      showSearch={false}>
         <MainDashboard/>
       </MainLayout>
     </div>
