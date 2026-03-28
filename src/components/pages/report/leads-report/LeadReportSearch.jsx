@@ -1,65 +1,65 @@
 "use client";
+import Input from '@/components/common/Input';
 import React from 'react';
-import Input from "../common/Input"; // Aapka custom component path
 
 const LeadReportSearch = () => {
-  // Dummy options for UI look
-  const dummyOptions = [{ id: 1, name: "Option 1" }];
-
   return (
     <div className="w-full bg-white p-6 rounded-sm shadow-sm border border-gray-100">
       <div className="flex flex-col gap-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+
           <Input 
             label="Users" 
             type="select" 
             placeholder="-Select Users-" 
-            options={dummyOptions} 
-            labelKey="name" 
-            valueKey="id" 
+            options={[{ id: 1, name: "Option 1" }]}
+            labelKey="name"
+            valueKey="id"
           />
+
           <Input 
             label="Select Status" 
             type="select" 
             placeholder="-Select Status-" 
-            options={dummyOptions} 
+            options={[{ id: 1, name: "Option 1" }]}
+            labelKey="name"
+            valueKey="id"
           />
+
           <Input 
             label="Select Branch" 
             type="select" 
             placeholder="-Select Branch-" 
-            options={dummyOptions} 
+            options={[{ id: 1, name: "Option 1" }]}
+            labelKey="name"
+            valueKey="id"
           />
+
           <Input 
             label="Select Source" 
             type="select" 
             placeholder="-Select Source-" 
-            options={dummyOptions} 
+            options={[{ id: 1, name: "Option 1" }]}
+            labelKey="name"
+            valueKey="id"
           />
+
           <Input 
             label="Search By Date" 
             type="select" 
             placeholder="-Select Date-" 
-            options={dummyOptions} 
+            options={[{ id: 1, name: "Option 1" }]}
+            labelKey="name"
+            valueKey="id"
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-end">
-          <Input 
-            type="text" 
-            placeholder="-Search by city-" 
-          />
-          <Input 
-            type="text" 
-            placeholder="-Search by state-" 
-          />
-          <Input 
-            type="text" 
-            placeholder="-Search by country-" 
-          />
-        
-          <div className="hidden lg:block"></div>
+          
+          <Input placeholder="-Search by city-" />
+          <Input placeholder="-Search by state-" />
+          <Input placeholder="-Search by country-" />
 
-          {/* Search Button */}
+          <div className="hidden lg:block"></div>
           <div className="pb-[2px]">
             <button 
               type="button"
@@ -68,6 +68,7 @@ const LeadReportSearch = () => {
               <i className="ri-search-line text-xl font-bold"></i>
             </button>
           </div>
+
         </div>
 
       </div>

@@ -5,7 +5,8 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Status Wise Report"
+      showSearch={false}>
         <Suspense fallback={<div>Loading...</div>}>
         <StatuswiseReport/>
         </Suspense>
