@@ -10,42 +10,33 @@ import DeletecheckedModal from "./DeletecheckedModal";
 
 const Leads = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isAssignOpen, setIsAssignOpen] = useState(false); 
-  const [transfer, setTransfer] = useState(false)
+  const [isAssignOpen, setIsAssignOpen] = useState(false);
+  const [transfer, setTransfer] = useState(false);
 
-  const [deletechecked,setDeletechecked] = useState(false)
+  const [deletechecked, setDeletechecked] = useState(false);
   return (
     <div className="p-6 bg-white">
       <div className="flex flex-wrap items-center gap-3 mb-4">
-        
         <button className="bg-white border border-gray-200 px-4 py-2 rounded shadow-sm flex items-center gap-2 text-red-600 font-medium">
           WATCH VIDEO
           <span className="text-red-600 text-lg">▶</span>
         </button>
-        <Button
-          onClick={() => setIsModalOpen(true)}
-          variant="success"
-        >
+        <Button onClick={() => setIsModalOpen(true)} variant="success">
           <Plus size={18} />
         </Button>
 
-        <Button onClick={()=>setTransfer(true)} variant="success">
+        <Button onClick={() => setTransfer(true)} variant="success">
           TRANSFER LEAD STATUS
         </Button>
-        <Button
-          onClick={() => setIsAssignOpen(true)}
-          variant="success"
-        >
+        <Button onClick={() => setIsAssignOpen(true)} variant="success">
           ASSIGN
         </Button>
 
-        <Button onClick={()=>setDeletechecked(true)} variant="success">
+        <Button onClick={() => setDeletechecked(true)} variant="success">
           DELETE CHECKED LEADS
         </Button>
 
-        <Button variant="success">
-          DELETE ALL 0 LEADS
-        </Button>
+        <Button variant="success">DELETE ALL 0 LEADS</Button>
 
         <Button variant="success">
           <Upload size={18} />
@@ -56,13 +47,11 @@ const Leads = () => {
 
       <div className="flex flex-col items-center justify-center py-16">
         <div className="text-blue-500 text-6xl mb-4">🔍</div>
-        <p className="text-gray-600 text-lg">
-          You have no records found.
-        </p>
+        <p className="text-gray-600 text-lg">You have no records found.</p>
       </div>
-      <RecordStatus 
-        currentPage={1} 
-        showNumbers={true} 
+      <RecordStatus
+        currentPage={1}
+        showNumbers={true}
         showDropdown={true}
         label="Users"
       />
@@ -74,15 +63,11 @@ const Leads = () => {
         isOpen={isAssignOpen}
         onClose={() => setIsAssignOpen(false)}
       />
-      <TransferLeadModal
-      isOpen={transfer}
-      onClose={()=>setTransfer(false)}
-      />
+      <TransferLeadModal isOpen={transfer} onClose={() => setTransfer(false)} />
       <DeletecheckedModal
-      isOpen={deletechecked}
-      onClose={()=>setDeletechecked(false)}
+        isOpen={deletechecked}
+        onClose={() => setDeletechecked(false)}
       />
-
     </div>
   );
 };

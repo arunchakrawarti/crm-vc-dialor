@@ -1,7 +1,7 @@
 "use client";
-import Button from '@/components/common/Button';
-import Input from '@/components/common/Input';
-import React from 'react';
+import Button from "@/components/common/Button";
+import Input from "@/components/common/Input";
+import React from "react";
 
 const LeadDisplaySetting = () => {
   return (
@@ -17,8 +17,16 @@ const LeadDisplaySetting = () => {
           <Input type="checkbox" id="comment" label="Show Comment" />
           <Input type="checkbox" id="date" label="Show Date" />
           <Input type="checkbox" id="branch" label="Show Branch" />
-          <Input type="checkbox" id="customQuestion" label="Show Custom Question" />
-          <Input type="checkbox" id="mobileAppCustom" label="Show Mobile App Custom Question" />
+          <Input
+            type="checkbox"
+            id="customQuestion"
+            label="Show Custom Question"
+          />
+          <Input
+            type="checkbox"
+            id="mobileAppCustom"
+            label="Show Mobile App Custom Question"
+          />
         </div>
         <div className="flex flex-col mt-4 gap-4">
           <Input type="checkbox" id="source" label="Show Source" />
@@ -32,8 +40,8 @@ const LeadDisplaySetting = () => {
         </div>
       </div>
       <div className="mt-10 flex justify-end">
-        <Button variant='success'>
-          SAVE 
+        <Button variant="success">
+          SAVE
           <i className="ri-send-plane-fill text-lg"></i>
         </Button>
       </div>

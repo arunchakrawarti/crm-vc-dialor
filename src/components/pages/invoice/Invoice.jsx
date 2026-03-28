@@ -3,7 +3,7 @@ import React, { useState } from "react"; // useState add kiya
 import BasicTable from "@/components/common/BasicTable";
 import Button from "@/components/common/Button";
 import Input from "@/components/common/Input";
-import InvoiceNoPopup from "./InvoiceNoPopup"; 
+import InvoiceNoPopup from "./InvoiceNoPopup";
 
 const Invoice = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -41,11 +41,15 @@ const Invoice = () => {
     <div className="bg-gray-50 min-h-screen p-3 sm:p-4 md:p-6">
       <div className="bg-white p-3 sm:p-4 rounded-xl border border-gray-200 shadow-sm">
         <div className="flex flex-col sm:flex-row justify-between sm:justify-end gap-2 mb-4">
-          <Button href="/invoice/create-invoice" variant="success" className="w-full sm:w-auto">
+          <Button
+            href="/invoice/create-invoice"
+            variant="success"
+            className="w-full sm:w-auto"
+          >
             + Invoice
           </Button>
-          <Button 
-            variant="success" 
+          <Button
+            variant="success"
             className="w-full sm:w-auto"
             onClick={() => setIsPopupOpen(true)}
           >
@@ -74,10 +78,7 @@ const Invoice = () => {
           </div>
 
           <div className="w-full sm:w-auto">
-            <Button
-              variant="success"
-              className="w-full sm:w-auto h-10 px-4"
-            >
+            <Button variant="success" className="w-full sm:w-auto h-10 px-4">
               <i className="ri-search-line"></i>
             </Button>
           </div>
@@ -94,9 +95,9 @@ const Invoice = () => {
           pageSize={10}
         />
       </div>
-      <InvoiceNoPopup 
-        isOpen={isPopupOpen} 
-        onClose={() => setIsPopupOpen(false)} 
+      <InvoiceNoPopup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
       />
     </div>
   );

@@ -1,14 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import BasicTable from '@/components/common/BasicTable';
-import Button from '@/components/common/Button';
-import RecordStatus from '@/components/common/RecordStatus';
+import BasicTable from "@/components/common/BasicTable";
+import Button from "@/components/common/Button";
+import RecordStatus from "@/components/common/RecordStatus";
 import NewSmtpModal from "./NewSmtpModal";
 
-
 const AddnewSmtp = () => {
-
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
 
   const columns = [
     { label: "Full Name", key: "fullName" },
@@ -22,16 +20,12 @@ const AddnewSmtp = () => {
 
   return (
     <div className="p-6 bg-white min-h-screen">
-    
       <div className="flex justify-end mb-4">
-        <Button variant='success' onClick={() => setIsOpen(true)}>
+        <Button variant="success" onClick={() => setIsOpen(true)}>
           New SMTP
         </Button>
       </div>
-      <NewSmtpModal 
-        isOpen={isOpen} 
-        onClose={() => setIsOpen(false)} 
-      />
+      <NewSmtpModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
 
       <div className="border border-gray-200 rounded-sm">
         <BasicTable
@@ -43,7 +37,7 @@ const AddnewSmtp = () => {
         />
 
         <div className="bg-white border-t border-gray-200">
-          <RecordStatus 
+          <RecordStatus
             currentPage={1}
             totalItems={0}
             itemsPerPage={10}

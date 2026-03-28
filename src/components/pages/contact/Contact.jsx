@@ -1,20 +1,19 @@
 "use client";
-import BasicTable from '@/components/common/BasicTable';
-import Button from '@/components/common/Button';
-import RecordStatus from '@/components/common/RecordStatus';
-import React, { useState } from 'react';
-import NewContactModal from './NewContactModal';
-import AssignContactModal from './AssignContactModal';
-
+import BasicTable from "@/components/common/BasicTable";
+import Button from "@/components/common/Button";
+import RecordStatus from "@/components/common/RecordStatus";
+import React, { useState } from "react";
+import NewContactModal from "./NewContactModal";
+import AssignContactModal from "./AssignContactModal";
 
 const Contact = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isModal, setIsModal] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isModal, setIsModal] = useState(false);
   const columns = [
-    { 
-      label: <input type="checkbox" className="w-4 h-4" />, 
+    {
+      label: <input type="checkbox" className="w-4 h-4" />,
       key: "checkbox",
-      render: () => <input type="checkbox" className="w-4 h-4" />
+      render: () => <input type="checkbox" className="w-4 h-4" />,
     },
     { label: "S.No.", key: "srNo" },
     { label: "Name", key: "name" },
@@ -26,14 +25,13 @@ const Contact = () => {
     { label: "Date", key: "date" },
   ];
 
-  
-  const data = []; 
+  const data = [];
 
   return (
     <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100 font-inter">
       <div className="flex justify-between items-center mb-6">
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           className="border-gray-200 px-6 py-2 shadow-sm text-red-600 font-bold uppercase tracking-wider text-xs bg-white"
         >
           Watch Video
@@ -41,43 +39,30 @@ const Contact = () => {
         </Button>
 
         <div className="flex gap-1">
-          <Button 
-          onClick={() => setIsOpen(true)}
-            variant="success"
-          >
+          <Button onClick={() => setIsOpen(true)} variant="success">
             New Contact
           </Button>
-          <Button 
-          onClick={() => setIsModal(true)}
-            variant="success"
-             
-          >
+          <Button onClick={() => setIsModal(true)} variant="success">
             Assign
           </Button>
         </div>
       </div>
-      <BasicTable 
-        columns={columns} 
-        data={data} 
+      <BasicTable
+        columns={columns}
+        data={data}
         wrapperClassName="rounded-sm border-gray-200"
       />
       <div className="mt-2">
-        <RecordStatus 
-          totalItems={0} 
-          currentPage={1} 
-          itemsPerPage={30} 
+        <RecordStatus
+          totalItems={0}
+          currentPage={1}
+          itemsPerPage={30}
           label="Contacts"
           onPageChange={(page) => console.log(page)}
         />
       </div>
-<NewContactModal 
-        isOpen={isOpen} 
-        onClose={() => setIsOpen(false)} 
-      />
-      <AssignContactModal 
-        isOpen={isModal} 
-        onClose={() => setIsModal(false)} 
-      />
+      <NewContactModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <AssignContactModal isOpen={isModal} onClose={() => setIsModal(false)} />
     </div>
   );
 };

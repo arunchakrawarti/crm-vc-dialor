@@ -16,36 +16,32 @@ const Input = ({
 }) => {
   return (
     <div className="flex w-full flex-col gap-1">
-      
       {label && rest?.type !== "checkbox" && (
-  <label className="font-inter font-semibold mb-1 text-[12px] text-[var(--color-gray-500)] uppercase tracking-wider">
-    {label}
-  </label>
-)}
+        <label className="font-inter font-semibold mb-1 text-[12px] text-primary uppercase tracking-wider">
+          {label}
+        </label>
+      )}
 
       {rest?.type === "checkbox" ? (
-      <label
-        htmlFor={rest.id}
-        className="flex items-center gap-3 cursor-pointer"
-      >
-        <input
-          type="checkbox"
-          id={rest.id}
-          checked={rest.value}
-          onChange={(e) => rest.onChange?.(e.target.checked)}
-          className="w-4 h-4 accent-blue-500"
-        />
-        <span className="text-sm text-gray-600">
-          {label}
-        </span>
-      </label>
-
-    ) :rest?.type === "textarea" ? (
+        <label
+          htmlFor={rest.id}
+          className="flex items-center gap-3 cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            id={rest.id}
+            checked={rest.value}
+            onChange={(e) => rest.onChange?.(e.target.checked)}
+            className="w-4 h-4 accent-blue-500"
+          />
+          <span className="text-sm text-gray-600">{label}</span>
+        </label>
+      ) : rest?.type === "textarea" ? (
         <div
           className={clsx(
             "flex w-full gap-3 rounded-lg px-3 py-2 border border-gray-300 bg-[var(--color-white)]",
             error && "border-red-400 ring-2 ring-red-300",
-            className
+            className,
           )}
         >
           {icon && (
@@ -54,18 +50,14 @@ const Input = ({
             </span>
           )}
 
-          <textarea
-            className="w-full outline-none text-sm"
-            {...rest}
-          />
+          <textarea className="w-full outline-none text-sm" {...rest} />
         </div>
-
       ) : rest?.type === "select" ? (
         <div
           className={clsx(
             "flex w-full items-center gap-3 rounded-lg px-3 py-1 border border-gray-300 bg-[var(--color-white)]",
             error && "border-red-400 ring-2 ring-red-300",
-            className
+            className,
           )}
         >
           {icon && (
@@ -94,13 +86,12 @@ const Input = ({
             ))}
           </select>
         </div>
-
       ) : (
         <div
           className={clsx(
             "flex w-full items-center gap-3 rounded-lg px-3 py-1 border border-gray-300 bg-[var(--color-white)]",
             error && "border-red-400 ring-2 ring-red-300",
-            className
+            className,
           )}
         >
           {icon && (
@@ -116,9 +107,7 @@ const Input = ({
         </div>
       )}
 
-      {error && (
-        <span className="text-xs text-red-500">{error}</span>
-      )}
+      {error && <span className="text-xs text-red-500">{error}</span>}
     </div>
   );
 };

@@ -13,9 +13,6 @@ import {
 } from "lucide-react";
 import AddAdminPopup from "../admins/AddAdminPopup";
 import RecordStatus from "@/components/common/RecordStatus";
-
-
-
 const Abe = () => {
   const [openModal, setOpenModal] = useState(false);
 
@@ -23,8 +20,8 @@ const Abe = () => {
     { label: "Name", key: "name" },
     { label: "Email", key: "email" },
     { label: "Phone", key: "phone" },
-     { label: "ABM", key: "abm" },
-      { label: "Assign", key: "assign" },
+    { label: "ABM", key: "abm" },
+    { label: "Assign", key: "assign" },
     { label: "Date", key: "date" },
     { label: "Actions", key: "actions" },
   ];
@@ -33,10 +30,8 @@ const Abe = () => {
 
   return (
     <div className="p-4 sm:p-6 bg-white border border-gray-200 rounded shadow-sm mt-6 sm:mt-10 font-sans text-gray-800">
-
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5 border-b pb-4">
-
         {/* Search */}
         <div className="flex w-full sm:w-auto">
           <div className="w-full sm:w-48">
@@ -53,7 +48,10 @@ const Abe = () => {
 
         {/* Buttons */}
         <div className="flex gap-2 sm:gap-3 w-full sm:w-auto justify-end">
-          <Button variant="outline" className="w-full sm:w-auto text-xs sm:text-sm">
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto text-xs sm:text-sm"
+          >
             WATCH VIDEO
           </Button>
           <Button
@@ -71,16 +69,13 @@ const Abe = () => {
         <BasicTable columns={columns} data={data} />
       </div>
 
-      <RecordStatus 
-  currentPage={1} 
-  showNumbers={true} 
-  showDropdown={true}
-  label="Users"
-/>
-      <AddAdminPopup
-        isOpen={openModal}
-        onClose={() => setOpenModal(false)}
+      <RecordStatus
+        currentPage={1}
+        showNumbers={true}
+        showDropdown={true}
+        label="Users"
       />
+      <AddAdminPopup isOpen={openModal} onClose={() => setOpenModal(false)} />
     </div>
   );
 };

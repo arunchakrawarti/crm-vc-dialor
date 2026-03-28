@@ -1,14 +1,13 @@
 "use client";
-import Button from '@/components/common/Button';
-import Input from '@/components/common/Input';
-import OverlayModal from '@/components/common/OverlayModal';
-import React from 'react';
-
+import Button from "@/components/common/Button";
+import Input from "@/components/common/Input";
+import OverlayModal from "@/components/common/OverlayModal";
+import React from "react";
 
 const NewTemplatePopup = ({ isOpen, onClose }) => {
   return (
-    <OverlayModal 
-      isOpen={isOpen} 
+    <OverlayModal
+      isOpen={isOpen}
       onClose={onClose}
       modalClass="bg-white rounded-lg shadow-2xl overflow-hidden"
     >
@@ -17,7 +16,7 @@ const NewTemplatePopup = ({ isOpen, onClose }) => {
       </div>
       <div className="p-6 flex flex-col gap-6">
         <div className="w-full md:w-3/4">
-          <Input 
+          <Input
             type="select"
             placeholder="Select Template"
             options={["Email Template", "SMS Template", "WhatsApp Template"]}
@@ -25,9 +24,8 @@ const NewTemplatePopup = ({ isOpen, onClose }) => {
           />
         </div>
 
-       
         <div className="w-full md:w-1/2">
-          <Input 
+          <Input
             label="Template Name"
             placeholder="Enter template name"
             className="border border-gray-300 rounded-md"
@@ -35,17 +33,10 @@ const NewTemplatePopup = ({ isOpen, onClose }) => {
         </div>
       </div>
       <div className="p-4 bg-gray-50 flex justify-end gap-3">
-        <Button 
-          onClick={onClose}
-          variant='primary'
-        >
+        <Button onClick={onClose} variant="primary">
           Cancel
         </Button>
-        <Button 
-          variant='success'
-        >
-          Save Template
-        </Button>
+        <Button variant="success">Save Template</Button>
       </div>
     </OverlayModal>
   );

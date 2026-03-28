@@ -16,16 +16,10 @@ const IvrLeads = () => {
           <Monitor size={100} strokeWidth={1} />
         </div>
 
-        <p className="text-gray-500 text-xl">
-          You have no records found.
-        </p>
+        <p className="text-gray-500 text-xl">You have no records found.</p>
       </div>
-<div className="p-2">
-        <RecordStatus 
-          totalItems={0} 
-          label="Leads" 
-          showNumbers={false} 
-        />
+      <div className="p-2">
+        <RecordStatus totalItems={0} label="Leads" showNumbers={false} />
       </div>
     </div>
   );

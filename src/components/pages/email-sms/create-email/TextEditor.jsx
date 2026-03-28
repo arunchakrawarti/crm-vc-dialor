@@ -49,21 +49,19 @@ export function TextEditor({ handleChange, initialValue }) {
 
   return (
     <div className="mt-5">
-        <ReactQuill
-      modules={modules}
-      theme="snow"
-      value={value}
-      onChange={(val) => {
-        setValue(val);
-        handleChange?.(val);
-      }}
-      placeholder="Compose an epic..."
-    />
-    <div className="flex justify-end mt-2">
-        <Button variant="success">
-        SEND
-    </Button>
-    </div>
+      <ReactQuill
+        modules={modules}
+        theme="snow"
+        value={value}
+        onChange={(val) => {
+          setValue(val);
+          handleChange?.(val);
+        }}
+        placeholder="Compose an epic..."
+      />
+      <div className="flex justify-end mt-2">
+        <Button variant="success">SEND</Button>
+      </div>
     </div>
   );
 }

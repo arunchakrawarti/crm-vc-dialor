@@ -1,16 +1,16 @@
 "use client";
-import React from 'react'; 
-import { Send } from 'lucide-react';
-import OverlayModal from '@/components/common/OverlayModal';
-import Input from '@/components/common/Input';
-import Button from '@/components/common/Button';
+import React from "react";
+import { Send } from "lucide-react";
+import OverlayModal from "@/components/common/OverlayModal";
+import Input from "@/components/common/Input";
+import Button from "@/components/common/Button";
 
 const LeadModal = ({ isOpen, onClose }) => {
   const CheckboxField = ({ label }) => (
     <label className="flex items-center gap-3 cursor-pointer group">
-      <input 
-        type="checkbox" 
-        className="w-4 h-4 rounded border-gray-300 text-[#00adef] focus:ring-[#00adef]" 
+      <input
+        type="checkbox"
+        className="w-4 h-4 rounded border-gray-300 text-[#00adef] focus:ring-[#00adef]"
       />
       <span className="text-sm text-gray-700 font-medium group-hover:text-black transition-colors">
         {label}
@@ -19,14 +19,15 @@ const LeadModal = ({ isOpen, onClose }) => {
   );
 
   return (
-    <OverlayModal 
-      isOpen={isOpen} 
+    <OverlayModal
+      isOpen={isOpen}
       onClose={onClose}
-      modalClass="max-w-4xl bg-white rounded-lg shadow-2xl" 
+      modalClass="max-w-4xl bg-white rounded-lg shadow-2xl"
     >
-      
       <div className="px-6 py-4 border-b border-gray-100">
-        <h2 className="text-2xl text-gray-800 font-semibold tracking-tight">Add Status</h2>
+        <h2 className="text-2xl text-gray-800 font-semibold tracking-tight">
+          Add Status
+        </h2>
       </div>
       <div className="p-6 space-y-8 overflow-y-auto h-120">
         <form className="space-y-6">
@@ -64,16 +65,15 @@ const LeadModal = ({ isOpen, onClose }) => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-            <Input 
-              label="Select Lead Conversion Status" 
-              type="select" 
+            <Input
+              label="Select Lead Conversion Status"
+              type="select"
               placeholder="-Select Status-"
               options={[]}
             />
           </div>
           <div className="flex justify-end pt-4">
-            <Button variant='success'
-              type="submit" >
+            <Button variant="success" type="submit">
               ADD STATUS <Send size={18} fill="currentColor" />
             </Button>
           </div>

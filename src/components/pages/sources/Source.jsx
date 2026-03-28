@@ -1,13 +1,13 @@
 "use client";
-import BasicTable from '@/components/common/BasicTable';
-import Button from '@/components/common/Button';
-import Input from '@/components/common/Input';
-import RecordStatus from '@/components/common/RecordStatus';
-import React, { useState } from 'react';
-import AddSourceModal from './AddSourceModal';
+import BasicTable from "@/components/common/BasicTable";
+import Button from "@/components/common/Button";
+import Input from "@/components/common/Input";
+import RecordStatus from "@/components/common/RecordStatus";
+import React, { useState } from "react";
+import AddSourceModal from "./AddSourceModal";
 
 const Source = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const columns = [
     { label: "Sr No.", key: "srNo" },
     { label: "Source Name", key: "sourceName" },
@@ -23,16 +23,12 @@ const Source = () => {
 
   const actions = [
     ({ row }) => (
-      <Button 
-        variant="success" 
-      >
+      <Button variant="success">
         <i className="ri-pencil-fill text-xs text-white"></i>
       </Button>
     ),
     ({ row }) => (
-      <Button 
-        variant="redbtn" 
-      >
+      <Button variant="redbtn">
         <i className="ri-delete-bin-fill text-xs text-white"></i>
       </Button>
     ),
@@ -43,26 +39,23 @@ const Source = () => {
       <div className="flex flex-wrap justify-between items-center mb-6 gap-4">
         <div className="flex items-center gap-0 w-full max-w-md">
           <div className="flex-1">
-            <Input 
-              placeholder="Enter Source Name" 
+            <Input
+              placeholder="Enter Source Name"
               className="rounded-r-none border-r-0 h-10"
             />
           </div>
-          <Button variant='success'>
+          <Button variant="success">
             <i className="ri-search-line text-white text-lg"></i>
           </Button>
         </div>
 
         <div className="flex items-center gap-4">
-         <Button 
-  variant="success"
-  onClick={() => setIsOpen(true)}
->
-  <i className="ri-add-line"></i>
-</Button>
+          <Button variant="success" onClick={() => setIsOpen(true)}>
+            <i className="ri-add-line"></i>
+          </Button>
 
-          <Button 
-            variant="redbtn" 
+          <Button
+            variant="redbtn"
             className="border-gray-200 px-4 py-2 shadow-md text-red-600 font-bold uppercase tracking-wider text-xs bg-white"
           >
             Watch Video
@@ -71,25 +64,22 @@ const Source = () => {
         </div>
       </div>
       <BasicTable
-        columns={columns} 
-        data={data} 
+        columns={columns}
+        data={data}
         actions={actions}
         wrapperClassName="rounded-sm border-gray-200"
       />
 
       <div className="mt-2">
         <RecordStatus
-          totalItems={data.length} 
-          currentPage={1} 
-          itemsPerPage={10} 
+          totalItems={data.length}
+          currentPage={1}
+          itemsPerPage={10}
           label="Source"
           onPageChange={(page) => console.log(page)}
         />
       </div>
-<AddSourceModal 
-  isOpen={isOpen} 
-  onClose={() => setIsOpen(false)} 
-/>
+      <AddSourceModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );
 };

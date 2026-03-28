@@ -5,8 +5,7 @@ import BasicTable from "@/components/common/BasicTable";
 import Button from "@/components/common/Button";
 
 const EmailHistory = () => {
-
-  const tableData = []; 
+  const tableData = [];
 
   const columns = [
     { label: "Sender", key: "sender" },
@@ -19,10 +18,7 @@ const EmailHistory = () => {
     <div className="bg-gray-100 space-y-4">
       <div className="bg-white p-4 shadow-sm rounded-sm flex items-center gap-2">
         <div className="w-64">
-          <Input 
-            placeholder="Enter Email ID" 
-            className="!h-[38px]"
-          />
+          <Input placeholder="Enter Email ID" className="!h-[38px]" />
         </div>
 
         <Button variant="success">
@@ -40,15 +36,14 @@ const EmailHistory = () => {
       />
       <div className="bg-white p-4 shadow-sm rounded-sm">
         <div className="w-20">
-          <Input 
-            type="select" 
-            options={["10", "25", "50", "100"]} 
+          <Input
+            type="select"
+            options={["10", "25", "50", "100"]}
             defaultValue="10"
-            className="!h-[35px] !py-0" 
+            className="!h-[35px] !py-0"
           />
         </div>
       </div>
-
     </div>
   );
 };

@@ -6,7 +6,6 @@ import { Texteditor } from "@/components/utils/Texteditor";
 import Button from "@/components/common/Button";
 
 const NewTaskPopup = ({ onClose, isOpen }) => {
-
   return (
     <OverlayModal onClose={onClose} isOpen={isOpen}>
       <div className="flex items-center justify-center">
@@ -15,7 +14,6 @@ const NewTaskPopup = ({ onClose, isOpen }) => {
             <h2 className="text-2xl font-bold text-gray-800">Add Task</h2>
           </div>
           <div className="p-6 overflow-y-auto h-120">
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
               <Input label="Task Title" />
 
@@ -50,11 +48,8 @@ const NewTaskPopup = ({ onClose, isOpen }) => {
             </div>
 
             <div className="flex justify-end mt-2">
-              <Button variant="success">
-                Add Task
-              </Button>
+              <Button variant="success">Add Task</Button>
             </div>
-
           </div>
         </div>
       </div>

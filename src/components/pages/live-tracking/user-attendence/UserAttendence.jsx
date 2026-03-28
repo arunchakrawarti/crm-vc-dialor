@@ -5,7 +5,6 @@ import Input from "@/components/common/Input";
 import RecordStatus from "@/components/common/RecordStatus";
 import React from "react";
 
-
 const UserAttendence = () => {
   const columns = [
     { label: "Sr No.", key: "sr" },
@@ -30,7 +29,6 @@ const UserAttendence = () => {
   return (
     <div className="">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end mb-6">
-        
         <Input
           type="select"
           label="Users"
@@ -57,16 +55,10 @@ const UserAttendence = () => {
       </div>
       <div className="relative">
         <div className="flex justify-end mb-2">
-          <Button variant="success">
-            DOWNLOAD
-          </Button>
+          <Button variant="success">DOWNLOAD</Button>
         </div>
 
-        <BasicTable
-          columns={columns}
-          data={data}
-          pagination={true}
-        />
+        <BasicTable columns={columns} data={data} pagination={true} />
       </div>
       <RecordStatus
         currentPage={1}
@@ -74,7 +66,6 @@ const UserAttendence = () => {
         itemsPerPage={10}
         label="TrackingDetails"
       />
-
     </div>
   );
 };

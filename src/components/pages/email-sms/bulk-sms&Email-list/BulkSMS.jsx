@@ -1,9 +1,9 @@
 "use client";
-import BasicTable from '@/components/common/BasicTable';
-import Button from '@/components/common/Button';
-import RecordStatus from '@/components/common/RecordStatus'; 
-import React, { useState } from 'react';
-import SendBulkSMSModal from './SendBulkSMSModal';
+import BasicTable from "@/components/common/BasicTable";
+import Button from "@/components/common/Button";
+import RecordStatus from "@/components/common/RecordStatus";
+import React, { useState } from "react";
+import SendBulkSMSModal from "./SendBulkSMSModal";
 
 const BulkSMSEmail = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,35 +23,40 @@ const BulkSMSEmail = () => {
     { label: "Send By", key: "send_by" },
   ];
 
-  const tableData = []; 
-  
+  const tableData = [];
 
   return (
     <div className="bg-gray-50">
       <div className="bg-white rounded shadow-sm border border-gray-200">
         <div className="flex justify-end items-center gap-2 p-4 flex-wrap">
-          <Button onClick={() => setIsOpen(true)} variant='success'>
+          <Button onClick={() => setIsOpen(true)} variant="success">
             Send Bulk SMS/Email
           </Button>
-          <Button href="/email-sms/bulk-sms&email-list/bulk-sms-list" variant='greenbtn'>
+          <Button
+            href="/email-sms/bulk-sms&email-list/bulk-sms-list"
+            variant="greenbtn"
+          >
             Bulk SMS List
           </Button>
-          <Button href="/email-sms/bulk-sms&email-list/bulk-email-lists" variant='greenbtn'>
+          <Button
+            href="/email-sms/bulk-sms&email-list/bulk-email-lists"
+            variant="greenbtn"
+          >
             Bulk Email List
           </Button>
         </div>
 
         <div className="border-t border-gray-200"></div>
         <div className="p-4">
-          <BasicTable 
-            columns={columns} 
-            data={tableData} 
+          <BasicTable
+            columns={columns}
+            data={tableData}
             pagination={true}
-            wrapperClassName="rounded-none border-gray-100" 
+            wrapperClassName="rounded-none border-gray-100"
           />
         </div>
         <div className="p-4 bg-white border-t border-gray-100">
-          <RecordStatus 
+          <RecordStatus
             currentPage={currentPage}
             itemsPerPage={itemsPerPage}
             label="Records"
@@ -61,13 +66,10 @@ const BulkSMSEmail = () => {
             onPageChange={(page) => setCurrentPage(page)}
           />
         </div>
-<SendBulkSMSModal 
-  isOpen={isOpen}
-  onClose={() => setIsOpen(false)}
-/>
+        <SendBulkSMSModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
       </div>
     </div>
   );
-}
+};
 
 export default BulkSMSEmail;

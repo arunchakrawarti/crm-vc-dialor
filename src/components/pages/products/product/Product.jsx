@@ -6,7 +6,7 @@ import BasicTable from "@/components/common/BasicTable";
 import AddProductModal from "./AddProductModal";
 
 const Product = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const columns = [
     {
       label: "Image",
@@ -27,20 +27,12 @@ const Product = () => {
     <div className=" space-y-4">
       <div className="bg-white rounded-xl p-4 flex flex-col sm:flex-row gap-3 items-center justify-between">
         <div className="flex flex-col sm:flex-row gap-3 w-full">
+          <Input placeholder="Search by Name" className="w-full" />
 
-          <Input
-            placeholder="Search by Name"
-            className="w-full"
-          />
-
-          <Input
-            placeholder="Search by SKU"
-            className="w-full"
-          />
-           <Button className="h-[52px] px-4" variant="success">
+          <Input placeholder="Search by SKU" className="w-full" />
+          <Button className="h-[52px] px-4" variant="success">
             <i className="ri-search-line text-lg"></i>
           </Button>
-
         </div>
         <Button
           className="h-[52px] px-4"
@@ -51,17 +43,10 @@ const Product = () => {
         </Button>
       </div>
       <div className="bg-white rounded-xl">
-        <BasicTable
-          columns={columns}
-          data={data}
-          pagination={true}
-        />
+        <BasicTable columns={columns} data={data} pagination={true} />
       </div>
 
-<AddProductModal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-      />
+      <AddProductModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );
 };

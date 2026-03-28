@@ -17,10 +17,7 @@ const Importantlead = () => {
           </Button>
         </div>
         <div>
-          <Input
-            label="Select CSV File"
-            type="file"
-          />
+          <Input label="Select CSV File" type="file" />
         </div>
         <div>
           <Input
@@ -35,9 +32,7 @@ const Importantlead = () => {
             IMPORT <Send size={18} fill="currentColor" />
           </Button>
         </div>
-
       </div>
-
     </div>
   );
 };

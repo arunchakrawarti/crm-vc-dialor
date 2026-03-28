@@ -5,7 +5,6 @@ import { Menu } from "lucide-react";
 const Statuschart = () => {
   return (
     <div className="bg-[#f4f6f9] mt-5 min-h-screen">
-      
       <div className="bg-white rounded-lg shadow-md p-6 relative">
         <div className="text-center relative">
           <h2 className="text-lg font-semibold text-gray-800">
@@ -21,13 +20,9 @@ const Statuschart = () => {
         </div>
         <div className="mt-10">
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-500 rotate-[-90deg]">
-              Leads
-            </span>
+            <span className="text-xs text-gray-500 rotate-[-90deg]">Leads</span>
             <div className="w-full">
-            
-              <div className="h-[1px] bg-gray-300 mt-10">
-              </div>
+              <div className="h-[1px] bg-gray-300 mt-10"></div>
               <div className="border-t border-gray-400 mt-20 relative">
                 <p className="text-center text-sm text-gray-600 mt-2">
                   Total Lead
@@ -43,7 +38,6 @@ const Statuschart = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import BasicTable from '@/components/common/BasicTable';
+import React from "react";
+import BasicTable from "@/components/common/BasicTable";
 
 const PerformanceTable = () => {
   const columns = [
@@ -12,17 +12,15 @@ const PerformanceTable = () => {
     { label: "First Call", key: "firstCall" },
     { label: "Last Call", key: "lastCall" },
   ];
-  const data = [
-    
-  ];
+  const data = [];
 
   return (
     <div className="bg-white border border-gray-200 rounded shadow-sm overflow-hidden mt-6">
-      <BasicTable 
-        columns={columns} 
-        data={data} 
+      <BasicTable
+        columns={columns}
+        data={data}
         pagination={true}
-        tableClassName="border-collapse" 
+        tableClassName="border-collapse"
         headerClassName="bg-white text-gray-800 font-bold border-b"
       />
     </div>

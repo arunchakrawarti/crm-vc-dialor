@@ -5,7 +5,6 @@ import Input from "@/components/common/Input";
 import RecordStatus from "@/components/common/RecordStatus";
 import React from "react";
 
-
 const UserOffline = () => {
   const columns = [
     { label: "Sr No.", key: "sr" },
@@ -22,7 +21,6 @@ const UserOffline = () => {
   return (
     <div className="">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end mb-6">
-        
         <Input
           type="select"
           label="Users"
@@ -41,12 +39,7 @@ const UserOffline = () => {
         </Button>
       </div>
       <div className="relative">
-
-        <BasicTable
-          columns={columns}
-          data={data}
-          pagination={true}
-        />
+        <BasicTable columns={columns} data={data} pagination={true} />
       </div>
       <RecordStatus
         currentPage={1}
@@ -54,7 +47,6 @@ const UserOffline = () => {
         itemsPerPage={10}
         label="TrackingDetails"
       />
-
     </div>
   );
 };

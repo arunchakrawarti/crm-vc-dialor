@@ -16,13 +16,12 @@ const DeletecheckedModal = ({ isOpen, onClose }) => {
           <X size={16} />
         </Button>
         <h2 className="text-xl font-medium text-gray-700 mb-6">
-         Please select at least one lead
+          Please select at least one lead
         </h2>
         <Button onClick={onClose} variant="success">
           OK
         </Button>
       </div>
-
     </OverlayModal>
   );
 };

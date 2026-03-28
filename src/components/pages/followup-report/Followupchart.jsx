@@ -1,13 +1,13 @@
 "use client";
-import React from 'react';
-import { Menu } from 'lucide-react';
+import React from "react";
+import { Menu } from "lucide-react";
 
 const Followupchart = () => {
   const chartTitles = [
     "Today Followups",
     "Tomorrow Followups",
     "Pending Followups",
-    "FreshLead Details"
+    "FreshLead Details",
   ];
 
   return (
@@ -29,24 +29,26 @@ const ChartCard = ({ title }) => (
           {title}
         </h3>
       </div>
-      <Menu className="text-gray-400 cursor-pointer hover:text-gray-600" size={22} />
+      <Menu
+        className="text-gray-400 cursor-pointer hover:text-gray-600"
+        size={22}
+      />
     </div>
     <div className="flex-1 relative border-l-2 border-b-2 border-gray-300 mb-10 ml-12 mt-4">
       <div className="absolute right-3 top-2 bg-white border border-gray-200 rounded shadow-lg p-3 text-[11px] space-y-2 z-10">
         <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-full bg-[#00adef]"></span> 
+          <span className="w-3 h-3 rounded-full bg-[#00adef]"></span>
           <span className="text-gray-600 font-semibold">Total</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-full bg-red-500"></span> 
+          <span className="w-3 h-3 rounded-full bg-red-500"></span>
           <span className="text-gray-600 font-semibold">Complete</span>
         </div>
       </div>
       <div className="absolute -left-10 top-1/2 -translate-y-1/2 -rotate-90 text-xs text-gray-400 font-bold tracking-widest uppercase">
         Values
       </div>
-      <div className="w-full h-full">
-      </div>
+      <div className="w-full h-full"></div>
       <div className="absolute -bottom-8 right-3 text-xs text-gray-400 font-bold italic">
         Values
       </div>

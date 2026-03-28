@@ -65,26 +65,22 @@ const Acres = () => {
           </div>
 
         </div>
-
-        {/* --- BUTTONS --- */}
         <div className="flex flex-wrap justify-center sm:justify-end items-center gap-2 sm:gap-4 mt-6 sm:mt-10">
 
-          <Button variant="success" className="w-full sm:w-auto text-xs sm:text-sm">
+          <Button variant="success">
             Save
           </Button>
 
-          <Button variant="success" className="w-full sm:w-auto text-xs sm:text-sm">
+          <Button variant="success">
             Cancel
           </Button>
 
-          <Button variant="success" className="w-full sm:w-auto text-xs sm:text-sm">
+          <Button variant="success">
             Test
           </Button>
 
           <Button
-            variant="success"
-            className="w-full sm:w-auto flex justify-center"
-          >
+            variant="success">
             <Plus size={20} className="sm:w-[24px] sm:h-[24px]" strokeWidth={3} />
           </Button>
 

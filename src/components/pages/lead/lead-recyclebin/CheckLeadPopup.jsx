@@ -21,7 +21,6 @@ const CheckLeadPopup = ({ isOpen, onClose }) => {
           OK
         </Button>
       </div>
-
     </OverlayModal>
   );
 };

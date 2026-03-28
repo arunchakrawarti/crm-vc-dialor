@@ -4,7 +4,13 @@ import Sidebar from "@/components/organisms/Sidebar";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 
-const MainLayout = ({ children, title, searchContent, showSearch = true, searchLayout = "left" }) => {
+const MainLayout = ({
+  children,
+  title,
+  searchContent,
+  showSearch = true,
+  searchLayout = "left",
+}) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
@@ -27,13 +33,11 @@ const MainLayout = ({ children, title, searchContent, showSearch = true, searchL
           showSearch={showSearch}
           searchLayout={searchLayout}
         >
-          {searchContent} 
+          {searchContent}
         </Header>
 
         <div className="flex-1 overflow-y-auto flex flex-col">
-          <main className="flex-1 p-4 md:px-6 lg:px-8">
-            {children}
-          </main>
+          <main className="flex-1 p-4 md:px-6 lg:px-8">{children}</main>
           <Footer />
         </div>
       </div>

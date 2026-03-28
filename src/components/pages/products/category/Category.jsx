@@ -21,11 +21,7 @@ const Category = () => {
     <div className="space-y-4">
       <div className="bg-white rounded-xl p-3 sm:p-4 flex flex-col lg:flex-row gap-3 lg:items-center justify-between shadow-sm border border-gray-300">
         <div className="flex flex-col sm:flex-row gap-3 w-full">
-
-          <Input
-            placeholder="Search by Name"
-            className="w-full"
-          />
+          <Input placeholder="Search by Name" className="w-full" />
 
           <Button
             className="h-[45px] sm:h-[52px] px-4 w-full sm:w-auto"
@@ -33,7 +29,6 @@ const Category = () => {
           >
             <i className="ri-search-line text-lg"></i>
           </Button>
-
         </div>
         <Button
           className="h-[45px] sm:h-[52px] px-4 w-full sm:w-auto"
@@ -42,23 +37,16 @@ const Category = () => {
         >
           <i className="ri-add-line text-lg"></i>
         </Button>
-
       </div>
       <div className="bg-white rounded-xl shadow-sm border overflow-hidden border-gray-300">
-
         <BasicTable
           columns={columns}
           data={data}
           pagination={true}
           wrapperClassName="rounded-xl"
         />
-
       </div>
-      <AddCategoryModal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-      />
-
+      <AddCategoryModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );
 };
