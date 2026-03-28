@@ -5,7 +5,9 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Lead Display Settings"
+      showSearch={false}
+      >
         <LeadDisplaySetting/>
       </MainLayout>
     </div>

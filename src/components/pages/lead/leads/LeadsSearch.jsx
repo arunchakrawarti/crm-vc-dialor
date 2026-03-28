@@ -14,10 +14,8 @@ const LeadsSearch = () => {
   const conversionOptions = [{ id: 1, name: "-Conversion Status-" }];
 
   return (
-    <div className="w-full bg-white p-6 rounded-sm shadow-sm border border-gray-100">
+    <div className="w-full bg-white p-6 rounded-sm shadow-sm border border-gray-100 overflow-y-auto h-120">
       <div className="flex flex-col gap-5">
-        
-        {/* ROW 1 */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
           <Input label="Name/Phone/Email" type="text" placeholder="" />
           <Input label="Description" type="text" placeholder="" />
@@ -46,8 +44,6 @@ const LeadsSearch = () => {
           <Input type="text" placeholder="Facebook Ad Name" />
           <Input type="select" options={conversionOptions} labelKey="name" valueKey="id" />
         </div>
-
-        {/* ROW 4: Checkbox and Search Button */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
           <Input type="text" placeholder="Select Question" />
           <div className="lg:col-span-2 flex items-center gap-2">

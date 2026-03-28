@@ -5,7 +5,9 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Email History"
+      showSearch={false}
+      >
         <Suspense fallback={<div>Loading...</div>}>
         <EmailHistory/>
         </Suspense>

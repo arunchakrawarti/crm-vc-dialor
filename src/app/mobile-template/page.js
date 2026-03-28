@@ -5,7 +5,7 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Company Mobile Template">
         <Suspense fallback={<div>Loading...</div>}>
         <MobileTemplateTable/>
         </Suspense>

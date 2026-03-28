@@ -5,7 +5,7 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Create Invoice">
         <Suspense fallback={<div>Loading...</div>}>
         <CreateInvoice/>
         </Suspense>

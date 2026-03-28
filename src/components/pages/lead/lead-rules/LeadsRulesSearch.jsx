@@ -1,41 +1,35 @@
 "use client";
+import Input from '@/components/common/Input';
 import React from 'react';
 
-
 const LeadsRulesSearch = () => {
-  // Dummy options dropdown ke liye
-  const userOptions = [
-    { id: 1, name: "Admin" },
-    { id: 2, name: "User" }
-  ];
-
   return (
     <div className="w-full bg-white p-6 rounded-sm shadow-sm border border-gray-100">
       <div className="flex flex-col gap-5">
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-end">
         
           <Input 
             label="Users" 
             type="select" 
             placeholder="-Select Users-" 
-            options={userOptions} 
+            options={[
+              { id: 1, name: "Admin" },
+              { id: 2, name: "User" }
+            ]}
             labelKey="name" 
             valueKey="id" 
           />
+
           <Input 
             label="Date from" 
-            type="text" 
-            placeholder="" 
+            type="date" 
           />
 
-          {/* Date To Input */}
           <Input 
             label="Date to" 
-            type="text" 
-            placeholder="" 
+            type="date" 
           />
-
-          {/* Blue Search Button */}
           <div className="pb-[2px]">
             <button 
               type="button"
@@ -46,6 +40,7 @@ const LeadsRulesSearch = () => {
           </div>
 
         </div>
+
       </div>
     </div>
   );

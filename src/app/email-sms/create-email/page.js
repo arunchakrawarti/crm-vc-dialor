@@ -5,7 +5,9 @@ import React, { Suspense } from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Send Mail Seperately"
+      showSearch={false}
+      >
         <Suspense fallback={<div>Loading...</div>}>
         <MainCreateEmail/>
         </Suspense>

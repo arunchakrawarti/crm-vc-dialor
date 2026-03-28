@@ -5,7 +5,9 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <MainLayout>
+      <MainLayout title="Payment Details"
+      showSearch={false}
+      >
         <MainPayment/>
       </MainLayout>
     </div>
